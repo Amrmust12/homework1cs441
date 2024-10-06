@@ -1,0 +1,64 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:16:24: ';' expected but ':' found.[0m
+[0m[[0m[31merror[0m] [0m[0mobject MapReduceProgram:[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:19:13: expected start of definition[0m
+[0m[[0m[31merror[0m] [0m[0m    private val word = new Text()[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:22:14: expected start of definition[0m
+[0m[[0m[31merror[0m] [0m[0m    override def map(key: LongWritable, value: Text, output: OutputCollector[Text, IntWritable], reporter: Reporter): Unit = {[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:34:86: ';' expected but ':' found.[0m
+[0m[[0m[31merror[0m] [0m[0mclass Reduce extends MapReduceBase with Reducer[Text, IntWritable, Text, IntWritable]:[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:37:5: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m    output.collect(key,  new IntWritable(sum.get()))[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:39:7: expected start of definition[0m
+[0m[[0m[31merror[0m] [0m[0m@main def runMapReduce() =[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:41:5: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m    val inputPath = "/Users/ameermustafa/Documents/cs441/anatomybook.txt"[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:42:5: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m    val outputPath = "/Users/ameermustafa/Documents/cs441/output.txt"[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:44:5: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m    conf.setJobName("WordCount")[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:45:5: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m    conf.set("fs.defaultFS", "local")[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:48:5: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m    conf.setOutputKeyClass(classOf[Text])[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:49:5: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m    conf.set("dfs.block.size", "64MB") // Setting the amount of data per shard[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:50:5: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m    conf.setOutputValueClass(classOf[IntWritable])[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:51:5: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m    conf.setMapperClass(classOf[MapReduceProgram.Map]) // Adjusted[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:52:5: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m    conf.setCombinerClass(classOf[Reduce])[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:53:5: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m    conf.setReducerClass(classOf[Reduce])[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:54:5: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m    conf.setInputFormat(classOf[TextInputFormat])[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:55:5: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m    conf.setOutputFormat(classOf[TextOutputFormat[Text, IntWritable]])[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:56:5: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m    FileInputFormat.setInputPaths(conf, new Path(inputPath))[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:57:5: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m    FileOutputFormat.setOutputPath(conf, new Path(outputPath))[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ameermustafa/Documents/cs441/map_reduce_project/src/main/scala/MapReduceProgram.scala:58:5: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m    JobClient.runJob(conf)[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m21 errors found[0m
